@@ -3,6 +3,14 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { Welcome } from './Welcome'
+import RecursiveTree from './recursive-tree'
+import { mockGroupsTreeList } from './data'
+import { TreeBranch } from './types'
+
+const onSelect = (value: TreeBranch) => {
+  // You can put whatever here
+  alert("you clicked: " + value.label)
+}
 
 const Home: NextPage = () => {
   return (
@@ -18,6 +26,8 @@ const Home: NextPage = () => {
           A group manager written in next.js
         </h1>
         <Welcome firstName={'Whoever'} lastName={'you are'}></Welcome>
+
+        <RecursiveTree listMeta={mockGroupsTreeList} onSelectCallback={onSelect}/>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
