@@ -2,10 +2,10 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { Welcome } from './Welcome'
-import RecursiveTree from './recursive-tree'
-import { mockGroupsTreeList } from './data'
-import { TreeBranch } from './types'
+import { Welcome } from '../components/Welcome'
+import RecursiveTree from '../components/recursive-tree'
+import { mockGroupsTreeList } from '../components/data'
+import { TreeBranch } from '../components/types'
 
 const onSelect = (value: TreeBranch) => {
   // You can put whatever here
