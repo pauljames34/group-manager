@@ -23,13 +23,32 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          A group manager written in next.js
+          A group manager control written in next.js
         </h1>
-        <Welcome firstName={'Whoever'} lastName={'you are'}></Welcome>
+        
+        
+        <div className={styles.card}>
+            <h2>The group manager control &rarr;</h2>
+            <p>Use the plus and minus buttons to expand and contract the groups.</p>
+            <p>
+            <RecursiveTree listMeta={mockGroupsTreeList} onSelectCallback={onSelect}/>
+            </p>
+          </div>
 
-        <RecursiveTree listMeta={mockGroupsTreeList} onSelectCallback={onSelect}/>
+          <div className={styles.grid}>
+          
+          <a href="https://github.com/pauljames34/group-manager" className={styles.card}>
+            <h2>Source Code &rarr;</h2>
+            <p>See the source code for this website hosted on bitbucket.org.</p>
+          </a>
 
-        <div className={styles.grid}>
+          
+          <a href="https://aws.amazon.com/amplify/" className={styles.card}>
+            <h2>Hosted By &rarr;</h2>
+            <p>App hosted by AWS Amplify.</p>
+          </a>
+
+
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h2>Documentation &rarr;</h2>
             <p>Find in-depth information about Next.js features and API.</p>
